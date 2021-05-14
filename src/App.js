@@ -1,13 +1,12 @@
 import React from 'react'
 import './App.css';
 import { connect } from 'react-redux'
+import {fetchLists} from './actions/fetchLists'
 
 class App extends React.Component {
 
   componentDidMount(){
-    fetch('http://localhost:3000/api/v1/lists')
-    .then(response => response.json())
-    .then(data => console.log(data))
+
   }
 
   render(){
@@ -17,5 +16,12 @@ class App extends React.Component {
     );
   }
 }
+
+// accessing our store values as props
+// const mapStateToProps = (state) => {
+//   return {
+//     lists: state.lists
+//   }
+// }
 
 export default connect()(App);
