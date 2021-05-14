@@ -7,7 +7,7 @@ import ListInput from '../components/ListInput'
 class ListsContainer extends React.Component {
 
   componentDidMount() {
-
+    this.props.fetchLists()
   }
 
   render() {
@@ -27,4 +27,4 @@ const mapStateToProps = state => {
   }
 }
 
-export default connect(mapStateToProps)(ListsContainer)
+export default connect(mapStateToProps, {fetchLists})(ListsContainer)
