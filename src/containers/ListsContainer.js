@@ -15,4 +15,11 @@ class ListsContainer extends React.Component {
   }
 }
 
-export default connect()(ListsContainer)
+// to see our data
+const mapStateToProps = state => {
+  return {
+    lists: state.lists
+  }
+}
+
+export default connect(mapStateToProps)(ListsContainer)
