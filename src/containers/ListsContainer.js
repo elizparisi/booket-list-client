@@ -5,6 +5,10 @@ import ListInput from '../components/ListInput'
 
 class ListsContainer extends React.Component {
 
+  componentDidMount() {
+    
+  }
+
   render() {
     return(
       <div>
