@@ -8,16 +8,18 @@ import thunk from 'redux-thunk'
 import { Provider } from 'react-redux'
 import bookReducer from './reducers/bookReducer'
 
-
+// takes in an action object, decides what we want to update in our store
 const rootReducer = combineReducers({
   bookReducer
 })
 
 const composeEnhancer = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
+// stores our data
 const store = createStore(rootReducer, composeEnhancer(applyMiddleware(thunk)))
 
 ReactDOM.render(
+  // wrap App in Provider to give it access to Redux store
   <Provider store={ store }>
     <App />
   </Provider>,
