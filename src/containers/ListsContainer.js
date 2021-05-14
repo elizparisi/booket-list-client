@@ -7,7 +7,8 @@ class ListsContainer extends React.Component {
   render() {
     return(
       <div>
-        ListsContainer
+        <ListInput/>
+        <Lists/>
       </div>
     )
   }
