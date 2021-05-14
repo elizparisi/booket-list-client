@@ -1,7 +1,7 @@
 import React from 'react'
 import './App.css';
 import { connect } from 'react-redux'
-import {fetchLists} from './actions/fetchLists'
+import ListsContainer from './containers/ListsContainer'
 
 class App extends React.Component {
 
@@ -12,7 +12,9 @@ class App extends React.Component {
   render(){
 
     return (
-      "In React App"
+      <div className="App">
+        <ListsContainer/>
+      </div>
     );
   }
 }
