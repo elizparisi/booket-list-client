@@ -4,7 +4,7 @@ const Lists = (props) => {
 
   return (
     <div>
-      Lists
+      {props.lists.map((list) => <li key={list.id}>{list.name}</li>)}
     </div>
   )
 }
