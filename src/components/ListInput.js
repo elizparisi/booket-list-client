@@ -9,7 +9,7 @@ class ListInput extends React.Component {
 
   handleChange = (event) => {
     this.setState({
-      [event.target.name]: event.target.value 
+      [event.target.name]: event.target.value
     })
   }
 
@@ -19,6 +19,8 @@ class ListInput extends React.Component {
         <form>
           <label>List Name:</label>
           <input type='text' placeholder='Enter your book list name' value={this.state.name} name='name' onChange={this.handleChange}/>
+          <br/>
+          <input type='submit'/>
         </form>
       </div>
     )
