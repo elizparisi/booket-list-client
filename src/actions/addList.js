@@ -3,7 +3,7 @@ export const addList = (formData) => {
 
   return (dispatch) => {
     fetch('http://localhost:3000/api/v1/lists', {
-      header: {
+      headers: {
         'Content-Type': 'application/json',
         'Accept': 'application/json'
       },
