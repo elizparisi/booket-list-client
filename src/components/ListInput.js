@@ -1,4 +1,5 @@
 import React from 'react'
+import {connect} from 'react-redux'
 
 class ListInput extends React.Component {
 
@@ -13,10 +14,14 @@ class ListInput extends React.Component {
     })
   }
 
+  handleSubmit = (event) => {
+
+  }
+
   render() {
     return(
       <div>
-        <form>
+        <form onSubmit={this.handleSubmit}>
           <label>List Name:</label>
           <input type='text' placeholder='Enter your book list name' value={this.state.name} name='name' onChange={this.handleChange}/>
           <br/>
@@ -27,4 +32,4 @@ class ListInput extends React.Component {
   }
 }
 
-export default ListInput
+export default connect()(ListInput)
