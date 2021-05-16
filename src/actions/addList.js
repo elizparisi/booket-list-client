@@ -10,6 +10,7 @@ export const addList = (formData) => {
       method: 'POST',
       body: JSON.stringify(formData)
     })
-
+    .then(response => response.json())
+    .then(list => dispath({type: 'ADD_LIST', payload: list}))
   }
 }
