@@ -18,6 +18,10 @@ class ListInput extends React.Component {
   handleSubmit = (event) => {
     event.preventDefault()
     this.props.addList(this.state)
+    // reset state to clear out form data
+    this.setState({
+      name: ''
+    })
   }
 
   render() {
