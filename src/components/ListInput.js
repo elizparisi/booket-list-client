@@ -1,5 +1,6 @@
 import React from 'react'
 import {connect} from 'react-redux'
+import {addList} from '../actions/addList'
 
 class ListInput extends React.Component {
 
@@ -32,4 +33,4 @@ class ListInput extends React.Component {
   }
 }
 
-export default connect()(ListInput)
+export default connect(null, {addList})(ListInput)
