@@ -1,6 +1,6 @@
 import React from 'react'
 import {connect} from 'react-redux'
-import {Route} from 'react-router-dom'
+import {Route, Switch} from 'react-router-dom'
 import {fetchLists} from '../actions/fetchLists'
 import Lists from '../components/Lists'
 import List from '../components/List'
@@ -15,9 +15,11 @@ class ListsContainer extends React.Component {
   render() {
     return(
       <div>
-        <Route path='/lists/new' component={ListInput}/>
-        <Route path='/lists/:id' render={(routerProps) => <List {...routerProps} lists={this.props.lists}/>}/>
-        <Route exact path='/lists' render={(routerProps) => <Lists {...routerProps} lists={this.props.lists}/>}/>
+        <Switch>
+          <Route path='/lists/new' component={ListInput}/>
+          <Route path='/lists/:id' render={(routerProps) => <List {...routerProps} lists={this.props.lists}/>}/>
+          <Route exact path='/lists' render={(routerProps) => <Lists {...routerProps} lists={this.props.lists}/>}/>
+        </Switch>
       </div>
     )
   }
