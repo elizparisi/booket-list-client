@@ -6,6 +6,7 @@ import reportWebVitals from './reportWebVitals';
 import { createStore, applyMiddleware, compose } from 'redux'
 import thunk from 'redux-thunk'
 import { Provider } from 'react-redux'
+import {BrowserRouter as Router} from 'react-router-dom'
 import listReducer from './reducers/listReducer'
 
 // takes in an action object, decides what we want to update in our store
@@ -21,7 +22,9 @@ const store = createStore(listReducer, composeEnhancer(applyMiddleware(thunk)))
 ReactDOM.render(
   // wrap App in Provider to give it access to Redux store
   <Provider store={ store }>
-    <App />
+    <Router>
+      <App />
+    </Router>
   </Provider>,
   document.getElementById('root')
 );
