@@ -5,7 +5,8 @@ const Lists = (props) => {
 
   return (
     <div>
-      {props.lists.map((list) => <div list={list}>List/</div>)}
+      {props.lists.map(list =>
+        <div key={list.id}><List list={list}/></div>)}
     </div>
   )
 }
