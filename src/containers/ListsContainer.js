@@ -3,6 +3,7 @@ import {connect} from 'react-redux'
 import {Route} from 'react-router-dom'
 import {fetchLists} from '../actions/fetchLists'
 import Lists from '../components/Lists'
+
 import ListInput from '../components/ListInput'
 
 class ListsContainer extends React.Component {
@@ -14,8 +15,8 @@ class ListsContainer extends React.Component {
   render() {
     return(
       <div>
-        <ListInput/>
-        <Lists lists={this.props.lists}/>
+        <Route path='/lists/new' component={ListInput}/>
+        <Route exact path='/lists' render={() => <Lists lists={this.props.lists}/>}/>
       </div>
     )
   }
