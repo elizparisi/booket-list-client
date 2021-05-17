@@ -1,12 +1,14 @@
 import React from 'react'
 
-class BooksForm extends React.Component {
+class BookForm extends React.Component {
 
   render() {
     return (
       <div>
-
+      
       </div>
     )
   }
 }
+
+export default BookForm
