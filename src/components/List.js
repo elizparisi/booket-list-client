@@ -3,9 +3,11 @@ import React from 'react'
 
 const List = (props) => {
 
+  let list = props.lists[props.match.params.id - 1]
+
   return (
     <li>
-      {props.list.name}
+      {list ? list.name : null}
     </li>
   )
 }
