@@ -12,7 +12,7 @@ const List = (props) => {
       <h2>
         {list ? list.name : null}
       </h2>
-      <BooksContainer/>
+      <BooksContainer list={list}/>
     </div>
   )
 }
