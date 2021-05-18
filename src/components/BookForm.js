@@ -32,6 +32,7 @@ class BookForm extends React.Component {
           <input type='checkbox' name='read' value={this.state.read} onChange={this.handleChange}/>
           <label>Rating:</label>
           <input type='text' name='rating' value={this.state.rating} onChange={this.handleChange}/>
+          <input type='submit'/>
         </form>
       </div>
     )
