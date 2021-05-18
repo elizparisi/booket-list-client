@@ -12,20 +12,26 @@ class BookForm extends React.Component {
     rating: ''
   }
 
+  handleChange = (event) => {
+    this.setState({
+      [event.target.name]: event.target.value
+    })
+  }
+
   render() {
     return (
       <div>
         <form>
           <label>Title:</label>
-          <input type='text' name='title' value={this.state.title}/>
+          <input type='text' name='title' value={this.state.title} onChange={this.handleChange}/>
           <label>Author:</label>
-          <input type='text' name='author' value={this.state.author}/>
+          <input type='text' name='author' value={this.state.author} onChange={this.handleChange}/>
           <label>Image URL:</label>
-          <input type='text' name='image_url' value={this.state.image_url}/>
+          <input type='text' name='image_url' value={this.state.image_url} onChange={this.handleChange}/>
           <label>Read?:</label>
-          <input type='checkbox' name='read' value={this.state.read}/>
+          <input type='checkbox' name='read' value={this.state.read} onChange={this.handleChange}/>
           <label>Rating:</label>
-          <input type='text' name='rating' value={this.state.rating}/>
+          <input type='text' name='rating' value={this.state.rating} onChange={this.handleChange}/>
         </form>
       </div>
     )
