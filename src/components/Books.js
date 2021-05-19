@@ -1,7 +1,12 @@
 import React from 'react'
 import {connect} from 'react-redux'
+import {deleteBook} from '../actions/deleteBook'
 
 const Books = (props) => {
+
+  const handleDelete = () => {
+    props.deleteBook()
+  }
 
   return (
     <div>
