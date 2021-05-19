@@ -34,7 +34,7 @@ class BookForm extends React.Component {
   render() {
     return (
       <div>
-        <form>
+        <form onSubmit={this.handleSubmit}>
           <label>Title:</label>
           <input type='text' name='title' value={this.state.title} onChange={this.handleChange}/>
           <label>Author:</label>
