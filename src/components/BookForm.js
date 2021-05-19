@@ -18,6 +18,11 @@ class BookForm extends React.Component {
     })
   }
 
+  handleSubmit = (event) => {
+    event.preventDefault()
+
+  }
+
   render() {
     return (
       <div>
@@ -29,7 +34,7 @@ class BookForm extends React.Component {
           <label>Image URL:</label>
           <input type='text' name='image_url' value={this.state.image_url} onChange={this.handleChange}/>
           <label>Read?:</label>
-          <input type='checkbox' name='read' value={this.state.read} onChange={this.handleChange}/>
+          <input type='checkbox' name='read' value={false} onChange={this.handleChange}/>
           <label>Rating:</label>
           <input type='text' name='rating' value={this.state.rating} onChange={this.handleChange}/>
           <input type='submit'/>
