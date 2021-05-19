@@ -1,5 +1,6 @@
 import React from 'react'
 import {connect} from 'react-redux'
+import {addBook} from '../actions/addBook'
 
 class BookForm extends React.Component {
 
@@ -20,7 +21,7 @@ class BookForm extends React.Component {
 
   handleSubmit = (event) => {
     event.preventDefault()
-
+    addBook(this.state, list)
   }
 
   render() {
@@ -44,4 +45,4 @@ class BookForm extends React.Component {
   }
 }
 
-export default connect(null, )(BookForm)
+export default connect(null, {addBook})(BookForm)
