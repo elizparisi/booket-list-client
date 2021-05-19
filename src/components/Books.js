@@ -1,4 +1,5 @@
 import React from 'react'
+import {connect} from 'react-redux'
 
 const Books = (props) => {
 
@@ -11,4 +12,4 @@ const Books = (props) => {
   )
 }
 
-export default Books
+export default connect(null, {deleteBook})(Books)
