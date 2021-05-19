@@ -21,7 +21,14 @@ class BookForm extends React.Component {
 
   handleSubmit = (event) => {
     event.preventDefault()
-    addBook(this.state, list)
+    this.props.addBook(this.state, this.props.id)
+    this.setState({
+      title: '',
+      author: '',
+      image_url: '',
+      read: false,
+      rating: ''
+    })
   }
 
   render() {
