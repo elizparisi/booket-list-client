@@ -1,9 +1,11 @@
 import React from 'react'
 import './App.css';
+import Navbar from './components/Navbar'
 import Home from './components/Home'
 import Footer from './components/Footer'
 import { connect } from 'react-redux'
 import ListsContainer from './containers/ListsContainer'
+import 'bootstrap/dist/css/bootstrap.min.css'
 
 class App extends React.Component {
 
@@ -15,6 +17,7 @@ class App extends React.Component {
 
     return (
       <div className="App">
+        <Navbar/>
         <Home/>
         <div>
         <ListsContainer/>
