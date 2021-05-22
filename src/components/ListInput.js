@@ -1,7 +1,7 @@
 import React from 'react'
 import {connect} from 'react-redux'
 import {addList} from '../actions/addList'
-
+import {Form, Button} from 'react-bootstrap'
 class ListInput extends React.Component {
 
 // set local state
@@ -31,7 +31,7 @@ class ListInput extends React.Component {
           <label>List Name:</label>
           <input type='text' placeholder='Enter your book list name' value={this.state.name} name='name' onChange={this.handleChange}/>
           <br/>
-          <input type='submit'/>
+          <Button variant='primary' input type='submit'>Submit</Button>
         </form>
       </div>
     )
