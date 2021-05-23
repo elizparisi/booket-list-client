@@ -27,12 +27,13 @@ class ListInput extends React.Component {
   render() {
     return(
       <div>
-        <form onSubmit={this.handleSubmit}>
-          <label>List Name:</label>
-          <input type='text' placeholder='Enter your book list name' value={this.state.name} name='name' onChange={this.handleChange}/>
-          <br/>
-          <Button variant='primary' input type='submit'>Submit</Button>
-        </form>
+        <Form onSubmit={this.handleSubmit}>
+        <Form.Group controlId="listName">
+          <Form.Label>List Name:</Form.Label>
+          <Form.Control type='text' placeholder='Enter your book list name' value={this.state.name} name='name' onChange={this.handleChange} />
+        </Form.Group>
+        <Button variant='primary' input type='submit'>Submit</Button>
+        </Form>
       </div>
     )
   }
