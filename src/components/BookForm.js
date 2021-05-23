@@ -1,6 +1,7 @@
 import React from 'react'
 import {connect} from 'react-redux'
 import {addBook} from '../actions/addBook'
+import {Form, Button} from 'react-bootstrap'
 
 class BookForm extends React.Component {
 
@@ -34,19 +35,34 @@ class BookForm extends React.Component {
   render() {
     return (
       <div>
-        <form onSubmit={this.handleSubmit}>
-          <label>Title:</label>
-          <input type='text' name='title' value={this.state.title} onChange={this.handleChange}/>
-          <label>Author:</label>
-          <input type='text' name='author' value={this.state.author} onChange={this.handleChange}/>
-          <label>Image URL:</label>
-          <input type='text' name='image_url' value={this.state.image_url} onChange={this.handleChange}/>
-          <label>Read?:</label>
-          <input type='checkbox' name='read' value={false} onChange={this.handleChange}/>
-          <label>Rating:</label>
-          <input type='text' name='rating' value={this.state.rating} onChange={this.handleChange}/>
-          <input type='submit'/>
-        </form>
+        <Form onSubmit={this.handleSubmit}>
+          <Form.Group controlId="bookTitle">
+          <Form.Label>Title:</Form.Label>
+          <Form.Control type='text' name='title' value={this.state.title} onChange={this.handleChange}/>
+          </Form.Group>
+
+          <Form.Group controlId="bookAuthor">
+          <Form.Label>Author:</Form.Label>
+          <Form.Control type='text' name='author' value={this.state.author} onChange={this.handleChange}/>
+          </Form.Group>
+
+          <Form.Group controlId="bookImage">
+          <Form.Label>Image URL:</Form.Label>
+          <Form.Control type='text' name='image_url' value={this.state.image_url} onChange={this.handleChange}/>
+          </Form.Group>
+
+          <Form.Group controlId="bookRead">
+          <Form.Label>Read?:</Form.Label>
+          <Form.Control type='checkbox' name='read' value={false} onChange={this.handleChange}/>
+          </Form.Group>
+
+          <Form.Group controlId="bookRating">
+          <Form.Label>Rating:</Form.Label>
+          <Form.Control type='text' name='rating' value={this.state.rating} onChange={this.handleChange}/>
+          </Form.Group>
+          
+          <Button variant='primary' input type='submit'>Submit</Button>
+        </Form>
       </div>
     )
   }
