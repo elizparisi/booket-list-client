@@ -1,7 +1,7 @@
 import React from 'react'
 import {connect} from 'react-redux'
 import {addBook} from '../actions/addBook'
-import {Form, Button} from 'react-bootstrap'
+import {Container, Form, Button} from 'react-bootstrap'
 
 class BookForm extends React.Component {
 
@@ -35,6 +35,7 @@ class BookForm extends React.Component {
   render() {
     return (
       <div>
+      <Container>
         <Form onSubmit={this.handleSubmit}>
           <Form.Group controlId="bookTitle">
           <Form.Label>Title:</Form.Label>
@@ -60,9 +61,10 @@ class BookForm extends React.Component {
           <Form.Label>Rating:</Form.Label>
           <Form.Control type='text' name='rating' value={this.state.rating} onChange={this.handleChange}/>
           </Form.Group>
-          
+
           <Button variant='primary' input type='submit'>Submit</Button>
         </Form>
+      </Container>
       </div>
     )
   }

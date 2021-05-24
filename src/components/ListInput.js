@@ -1,7 +1,7 @@
 import React from 'react'
 import {connect} from 'react-redux'
 import {addList} from '../actions/addList'
-import {Form, Button} from 'react-bootstrap'
+import {Container, Form, Button} from 'react-bootstrap'
 class ListInput extends React.Component {
 
 // set local state
@@ -27,6 +27,7 @@ class ListInput extends React.Component {
   render() {
     return(
       <div>
+      <Container>
         <Form onSubmit={this.handleSubmit}>
         <Form.Group controlId="listName">
           <Form.Label>List Name:</Form.Label>
@@ -34,6 +35,7 @@ class ListInput extends React.Component {
         </Form.Group>
         <Button variant='primary' input type='submit'>Submit</Button>
         </Form>
+      </Container>
       </div>
     )
   }
