@@ -2,6 +2,7 @@ import React from 'react'
 import './App.css';
 import Navigation from './components/Navigation'
 import Home from './components/Home'
+import About from './components/About'
 import Footer from './components/Footer'
 import { connect } from 'react-redux'
 import ListsContainer from './containers/ListsContainer'
@@ -18,11 +19,10 @@ class App extends React.Component {
     return (
       <div className="App">
         <Navigation/>
-        <Home/>
         <div>
         <ListsContainer/>
         </div>
-        <div>
+        <div className='footer'>
           <Footer/>
         </div>
       </div>
