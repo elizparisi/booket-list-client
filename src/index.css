@@ -12,19 +12,31 @@ code {
     monospace;
 }
 
-.home img {
+.navbar {
+  background-color: #c79288;
+  color: white;
+}
+
+/* .home img {
   position: relative;
   width: 100%;
-  height: auto;
+  height: 100%;
+} */
+
+
+.jumbotron {
+  color: #fff;
+  background-image: url('https://cms.qz.com/wp-content/uploads/2017/08/annie-spratt-303942.jpg?quality=75&strip=all&w=1200&h=630&crop=1');
+  height: 600px;
+  width: 100%;
 }
 
-.book-card {
+.jumbotron h1 {
 
-  float: left;
-  overflow: hidden;
+  font-size: 62px;
 }
 
-.footer{
+.footer {
 
   height: 60px;
   background-color: #c79288;
