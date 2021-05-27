@@ -8,8 +8,7 @@ const Footer = () => {
 
   return (
     <footer className="footer">
-      <p>Made with <span style={heartStyle}>&#9829;</span> by Liz</p>
-      <p><a href="https://github.com/">Github</a></p>
+      <p>Made with <span style={heartStyle}>&#9829;</span> by Liz <br></br><a href='https://github.com/elizparisi/booket-list-client'>Github</a></p>
     </footer>
   )
 }
