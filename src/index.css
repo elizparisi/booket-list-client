@@ -40,10 +40,14 @@ code {
   margin-top: 50px;
 }
 
+.book-card {
+  margin-bottom: 65px;
+}
+
 .footer {
   height: 50px;
   background-color: #c79288;
-  position: sticky;
+  position: fixed;
   bottom: 0;
   left: 0;
   width: 100%;
