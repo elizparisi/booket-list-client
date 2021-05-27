@@ -1,8 +1,10 @@
+* {
+  font-family: 'Marcellus', serif;
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Marcellus', serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -17,13 +19,6 @@ code {
   color: white;
 }
 
-/* .home img {
-  position: relative;
-  width: 100%;
-  height: 100%;
-} */
-
-
 .jumbotron {
   color: #fff;
   background-image: url('https://cms.qz.com/wp-content/uploads/2017/08/annie-spratt-303942.jpg?quality=75&strip=all&w=1200&h=630&crop=1');
@@ -32,15 +27,23 @@ code {
 }
 
 .jumbotron h1 {
-
+  font-weight: bold;
   font-size: 62px;
 }
 
-.footer {
+.about {
+  color: #c79288;
+  font-family: 'Marcellus', serif;
+  font-size: 35px;
+  text-align: center;
+  padding: 30px;
+  margin-top: 50px;
+}
 
-  height: 60px;
+.footer {
+  height: 50px;
   background-color: #c79288;
-  position: fixed;
+  position: sticky;
   bottom: 0;
   left: 0;
   width: 100%;
