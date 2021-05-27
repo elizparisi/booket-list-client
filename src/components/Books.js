@@ -10,7 +10,7 @@ const Books = (props) => {
   }
 
   return (
-    <Container>
+    <Container fluid>
       <Row>
       {props.books && props.books.map(book =>
         <Col xs={6} md={4}>
