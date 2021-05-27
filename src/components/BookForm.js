@@ -57,11 +57,6 @@ class BookForm extends React.Component {
           <Form.Control type='checkbox' name='read' value={false} onChange={this.handleChange}/>
           </Form.Group>
 
-          <Form.Group controlId="bookRating">
-          <Form.Label>Rating:</Form.Label>
-          <Form.Control type='text' name='rating' value={this.state.rating} onChange={this.handleChange}/>
-          </Form.Group>
-
           <Button variant='primary' input type='submit'>Submit</Button>
         </Form>
       </Container>

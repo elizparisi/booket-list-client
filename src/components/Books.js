@@ -20,7 +20,6 @@ const Books = (props) => {
             <Card.Title>{book.title}</Card.Title>
             <Card.Text>By: {book.author} <br/>
             Read: {book.read} <br/>
-            Rating: {book.rating}
             </Card.Text>
             <Button variant='primary' onClick={() => handleDelete(book)}>Delete</Button>
           </Card.Body>
