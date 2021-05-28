@@ -10,8 +10,7 @@ class BookForm extends React.Component {
     title: '',
     author: '',
     image_url: '',
-    read: false,
-    rating: ''
+    read: 'no'
   }
 
   handleChange = (event) => {
@@ -27,8 +26,7 @@ class BookForm extends React.Component {
       title: '',
       author: '',
       image_url: '',
-      read: false,
-      rating: ''
+      read: 'no'
     })
   }
 
@@ -54,7 +52,10 @@ class BookForm extends React.Component {
 
           <Form.Group controlId="bookRead">
           <Form.Label>Read?:</Form.Label>
-          <Form.Control type='checkbox' name='read' value={false} onChange={this.handleChange}/>
+          <Form.Control as='select' name='read' defaultValue={this.state.read} onChange={this.handleChange}>
+            <option value="no">no</option>
+            <option value="yes">yes</option>
+          </Form.Control>
           </Form.Group>
 
           <Button variant='primary' input type='submit'>Submit</Button>
