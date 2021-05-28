@@ -18,7 +18,7 @@ class ListsContainer extends React.Component {
     return(
       <div>
         <Switch>
-          <Route path='/home' component={Home}>
+          <Route exact path='/' component={Home}>
             <Home/>
           </Route>
           <Route path='/about' component={About}>
