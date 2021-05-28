@@ -1,3 +1,42 @@
+# Booket Lists App
+
+Backend link- https://github.com/elizparisi/booket-list-backend
+  
+
+# Table of contents
+
+    About the Project 
+    Built With
+    Setup
+    License
+
+# About 
+
+  This application was built with a Ruby on Rails backend and React frontend. This app allows users to create reading lists to keep track of all their must-read books. A user can create as many lists as they want, then add books to their lists. A user can also delete a book from a list if they want. 
+
+# Built With
+    
+    Ruby-on-Rails
+    Javascript
+    React
+    Redux
+
+# Setup
+
+  Follow these steps to start up the Booket Lists app:
+
+    Fork and clone this repository onto your own computer and run cd booket-list-client.
+    Navigate to the backend repository (linked aboved) and follow the installation instructions.
+    From the booket-list-client directory, run npm install and npm start.
+
+# License 
+
+  Distributed under the MIT License. See LICENSE for more information.
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
