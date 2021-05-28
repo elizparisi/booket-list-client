@@ -3,7 +3,7 @@ import {connect} from 'react-redux'
 import {addList} from '../actions/addList'
 import {Container, Form, Button} from 'react-bootstrap'
 
-class ListInput extends React.Component {
+class ListForm extends React.Component {
 
 // set local state
   state = {
@@ -42,4 +42,4 @@ class ListInput extends React.Component {
   }
 }
 
-export default connect(null, {addList})(ListInput)
+export default connect(null, {addList})(ListForm)
